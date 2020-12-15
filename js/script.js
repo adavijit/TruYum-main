@@ -47,7 +47,7 @@ const deaultMenuItems = [
 ];
 let cartItems = [];
 
-function insertRowCustomer() {
+const insertRowCustomer = () => {
   deaultMenuItems.map((elem, key) => {
     if (elem.active === "Yes") {
       let tbodyRef = document
@@ -82,8 +82,8 @@ function insertRowCustomer() {
     }
   });
   // append the new row to the table
-}
-function insertRowAdmin() {
+};
+const insertRowAdmin = () => {
   deaultMenuItems.map((elem, key) => {
     let tbodyRef = document
       .getElementById("myTable")
@@ -122,9 +122,9 @@ function insertRowAdmin() {
     newCell7.appendChild(newText7);
   });
   // append the new row to the table
-}
+};
 
-function getUrlVars() {
+const getUrlVars = () => {
   var vars = {};
   var parts = window.location.href.replace(
     /[?&]+([^=&]+)=([^&]*)/gi,
@@ -133,8 +133,8 @@ function getUrlVars() {
     }
   );
   return vars;
-}
-function editMenu() {
+};
+const editMenu = () => {
   const data = getUrlVars();
   document.getElementById("price").value = data.item_price;
   document.getElementById("item_name").value = data.item_name;
@@ -147,16 +147,16 @@ function editMenu() {
   if (data.free_delivery === "Yes")
     document.getElementById("active-yes").checked = true;
   else document.getElementById("active-no").checked = true;
-}
+};
 
-function showEditSuccess() {
+const showEditSuccess = () => {
   const data = getUrlVars();
   console.log("🚀 ~ file: script.js ~ line 159 ~ showEditSuccess ~ data", data);
   document.getElementById("msg").innerHTML =
     data.item_name + " details saved successfully...";
-}
+};
 
-function showCart() {
+const showCart = () => {
   let price = 0;
   deaultMenuItems.map((elem, key) => {
     if (elem.active === "Yes") {
@@ -191,4 +191,4 @@ function showCart() {
   });
   const result = document.getElementById("result");
   result.innerHTML = "Total Rs. " + price;
-}
+};
