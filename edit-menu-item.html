@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TruYum</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#myNavbar"
+        >
+          <i class="fas fa-bars fa-fw"></i>
+        </button>
+        <a class="navbar-brand">
+          <div>
+            <span>TruYum</span>
+            <img src="./images/logo.png" alt="Logo" />
+          </div>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="./menu-item-list-admin.html"
+              ><span class="link"> Admin </span>
+            </a>
+          </li>
+          <li></li>
+          <li>
+            <a href="./menu-item-list-customer.html"
+              ><span class="link"> Menu </span></a
+            >
+          </li>
+          <li>
+            <a href="./cart.html"><span class="link"> Cart </span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <form action="./edit_menu_item_status.html" id="myform" name="edit-menu">
+        <div id="enter-item-name">
+          <div><label for="item_name">Name</label></div>
+          <div>
+            <input
+              class="form-control"
+              type="text"
+              id="item_name"
+              name="item_name"
+              placeholder="enter item name"
+              required
+            />
+          </div>
+          <div id="name-error"></div>
+        </div>
+        <table class="table" id="myTable">
+          <thead>
+            <tr>
+              <th>Price (Rs.)</th>
+              <th>Active</th>
+              <th>Date of Launch</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  id="price"
+                  name="price"
+                  required
+                />
+              </td>
+              <td>
+                <input type="radio" id="active-yes" value="yes" name="active" />
+                <label for="active-yes">Yes</label>
+                <input type="radio" id="active-no" value="no" name="active" />
+                <label for="active-no">No</label>
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="date"
+                  id="launch-date"
+                  name="launch-date"
+                  required
+                />
+              </td>
+              <td>
+                <select name="category" id="category" class="form-control">
+                  <option value="Starters">Starters</option>
+                  <option value="Main Course">Main Course</option>
+                  <option value="Dessert">Dessert</option>
+                  <option value="Drinks">Drinks</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="delivery">
+          <input
+            type="checkbox"
+            id="free-delivery"
+            name="free-delivery"
+            value="free-delivery"
+          />
+          <label for="free-delivery">Free Delivery</label>
+        </div>
+
+        <button class="btn btn-primary" type="submit" id="save" name="save">
+          Save
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
+<script src="./js/script.js"></script>
+<script>
+  editMenu();
+</script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TruYum</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#myNavbar"
+        >
+          <i class="fas fa-bars fa-fw"></i>
+        </button>
+        <a class="navbar-brand">
+          <div>
+            <span>TruYum</span>
+            <img src="./images/logo.png" alt="Logo" />
+          </div>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="./menu-item-list-admin.html"
+              ><span class="link"> Admin </span>
+            </a>
+          </li>
+          <li></li>
+          <li>
+            <a href="./menu-item-list-customer.html"
+              ><span class="link"> Menu </span></a
+            >
+          </li>
+          <li>
+            <a href="./cart.html"><span class="link"> Cart </span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Menu Items</h2>
+      <center>Item added to cart successfully</center>
+      <table class="table" id="myTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Free Delivery</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
+<script src="./js/script.js"></script>
+<script>
+  insertRowCustomer();
+</script>

@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+}
+.navbar {
+  background: rgb(48, 84, 150);
+  color: white;
+  margin: 0;
+  height: 5em;
+}
+.navbar-brand span {
+  color: white;
+  font-size: 2.5rem;
+  margin-right: 1em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.navbar-brand div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-brand img {
+  height: 2em;
+  width: 2em;
+}
+.add-to-cart {
+  cursor: pointer;
+}
+
+#result {
+  font-size: 2rem;
+  color: green;
+  float: right;
+}
+
+#myform button {
+  float: left;
+}
+.container {
+  margin-top: 5em;
+}
+
+#msg {
+  color: green;
+  font-weight: bold;
+}
+
+.link {
+  color: white;
+  font-size: 1.5rem;
+}
+center {
+  font-size: 2rem;
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  font-weight: bold;
+  color: green;
+}
+
+h4 {
+  font-size: 3rem;
+}
+.no-item-p {
+  font-size: 2rem;
+}
+.no-item-p a {
+  text-decoration: underline;
+}
